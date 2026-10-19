@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pushpa ka Dussehra</title>
+<style>
+:root{--bg:#12071f;--gold:#ffc93c;--ink:#fff4e0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#12071f}}
+:root[data-theme="dark"]{--bg:#12071f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:var(--bg);color:var(--ink);font-family:Georgia,'Noto Serif Devanagari',serif;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+#hud{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;pointer-events:none;font-size:15px}
+#bar{width:120px;height:12px;border:2px solid var(--gold);border-radius:8px;overflow:hidden;background:rgba(0,0,0,.4)}
+#fill{height:100%;width:100%;background:linear-gradient(90deg,#e8321e,var(--gold));transition:width .3s}
+#hint{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 6px);text-align:center;font-size:13px;opacity:.8;pointer-events:none}
+#msg{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;background:rgba(18,7,31,.82);transition:opacity .5s}
+#msg h1{font-size:clamp(32px,10vw,58px);color:var(--gold);line-height:1.15;margin-bottom:12px}
+#msg p{max-width:28ch;margin-bottom:24px;font-size:18px;line-height:1.55}
+button{font:inherit;font-size:19px;padding:14px 30px;border:0;border-radius:30px;background:var(--gold);color:#3a1200;font-weight:bold;cursor:pointer}
+button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+#mu{pointer-events:auto;padding:4px 10px;font-size:18px;background:rgba(0,0,0,.45);color:inherit;border-radius:14px}
+.hide{opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud"><span>Teer: <b id="n">0</b></span><button id="mu" aria-label="Awaaz on ya off">🔊</button><div id="bar"><div id="fill"></div></div></div>
